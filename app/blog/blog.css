@@ -1,0 +1,518 @@
+/* Copy everything from the original <style> tag EXCEPT the top-bar, navbar, and footer styles */
+/* Keep only: blog-hero, bubbles, particles, categories, blog-card, newsletter, pagination, etc. */
+
+/* For completeness, here is the exact relevant CSS (same as your reference): */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Blog Hero */
+.blog-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle, rgba(254, 23, 27, 0.15) 0%, rgba(99, 102, 241, 0.08) 100%);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: rise 12s infinite ease-in-out;
+    box-shadow: 0 0 20px rgba(254, 23, 27, 0.1);
+}
+
+/* bubble nth-child positions (same as reference) */
+.bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    left: 25%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+    width: 45px;
+    height: 45px;
+    left: 45%;
+    animation-duration: 6s;
+    animation-delay: 0.5s;
+}
+
+.bubble:nth-child(6) {
+    width: 150px;
+    height: 150px;
+    left: 55%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(7) {
+    width: 70px;
+    height: 70px;
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 1.5s;
+}
+
+.bubble:nth-child(8) {
+    width: 90px;
+    height: 90px;
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: 2.5s;
+}
+
+.bubble:nth-child(9) {
+    width: 55px;
+    height: 55px;
+    left: 88%;
+    animation-duration: 7.5s;
+    animation-delay: 3.5s;
+}
+
+.bubble:nth-child(10) {
+    width: 110px;
+    height: 110px;
+    left: 92%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.4;
+    }
+
+    100% {
+        bottom: 100%;
+        transform: translateX(40px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.ai-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(135deg, #FE171B, #6366f1);
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatParticle 8s infinite ease-in-out;
+    box-shadow: 0 0 8px rgba(254, 23, 27, 0.5);
+}
+
+.ai-particle:nth-child(11) {
+    top: 20%;
+    left: 10%;
+    animation-duration: 6s;
+}
+
+.ai-particle:nth-child(12) {
+    top: 50%;
+    left: 85%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.ai-particle:nth-child(13) {
+    top: 70%;
+    left: 20%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+.ai-particle:nth-child(14) {
+    top: 30%;
+    left: 75%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 8s;
+    animation-delay: 0.5s;
+}
+
+.ai-particle:nth-child(15) {
+    top: 85%;
+    left: 45%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 6.5s;
+    animation-delay: 3s;
+}
+
+.ai-particle:nth-child(16) {
+    top: 15%;
+    left: 60%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 9s;
+    animation-delay: 1.8s;
+}
+
+.ai-particle:nth-child(17) {
+    top: 65%;
+    left: 90%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 7.2s;
+    animation-delay: 2.3s;
+}
+
+.ai-particle:nth-child(18) {
+    top: 40%;
+    left: 5%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 5.8s;
+    animation-delay: 3.8s;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-60px) translateX(30px) scale(1.2);
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(-120px) translateX(60px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 23, 27, 0.08) 0%, rgba(99, 102, 241, 0.04) 100%);
+    filter: blur(40px);
+    animation: pulseGlow 6s infinite alternate ease-in-out;
+}
+
+.glow-orb:nth-child(19) {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+    animation-duration: 8s;
+}
+
+.glow-orb:nth-child(20) {
+    width: 250px;
+    height: 250px;
+    bottom: -80px;
+    left: -80px;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #FE171B, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge-animate {
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-animate:hover {
+    transform: translateY(-2px);
+    letter-spacing: 0.3px;
+}
+
+/* Categories */
+.blog-categories {
+    padding: 30px 0;
+    background: white;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.category-btn {
+    background: transparent;
+    border: 1.5px solid #e2e8f0;
+    padding: 8px 24px;
+    border-radius: 40px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: #475569;
+    margin: 5px;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #FE171B;
+    border-color: #FE171B;
+    color: white;
+}
+
+/* Blog Cards */
+.blog-section {
+    padding: 80px 0;
+}
+
+.blog-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 28px;
+    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 45px -15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.8rem;
+}
+
+.blog-meta i {
+    margin-right: 5px;
+}
+
+.blog-category-tag {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #FE171B;
+    margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.blog-card p {
+    color: #64748b;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #FE171B;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
+}
+
+.blog-card:hover .read-more {
+    gap: 12px;
+}
+
+/* Newsletter */
+.newsletter-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 60px 0;
+}
+
+.newsletter-box {
+    background: #ffffff;
+    border-radius: 48px;
+    padding: 3rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f2f5;
+}
+
+.btn-custom {
+    background: linear-gradient(105deg, #FE171B 0%, #6366f1 100%);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 28px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(105deg, #4338ca, #FE171B);
+    box-shadow: 0 15px 25px -8px rgba(79, 70, 229, 0.5);
+    color: white;
+}
+
+/* Pagination */
+.pagination .page-link {
+    color: #475569;
+    border-radius: 40px;
+    margin: 0 5px;
+    border: 1px solid #e2e8f0;
+}
+
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+    background: #FE171B;
+    border-color: #FE171B;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-hero {
+        min-height: 40vh;
+        text-align: center;
+    }
+
+    .blog-section {
+        padding: 60px 0;
+    }
+
+    .newsletter-box {
+        padding: 2rem;
+    }
+
+    .blog-image {
+        height: 180px;
+    }
+}

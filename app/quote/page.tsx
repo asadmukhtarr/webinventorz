@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 // API Configuration
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://admin.webinventorz.com/api';
 
 export default function QuotePage() {
   const [formData, setFormData] = useState({

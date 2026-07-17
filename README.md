@@ -358,7 +358,7 @@ Full Stack Web & Mobile Application Developer
 
 📧 Email: contact@asadmukhtar.online
 
-💼 LinkedIn: https://linkedin.com/in/asadmukhtar
+💼 LinkedIn: https://www.linkedin.com/in/muhammadasad0/
 
 🐙 GitHub: https://github.com/asadmukhtarr
 
